@@ -10,12 +10,26 @@ module.exports = function(environment) {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
+      },
+      EXTEND_PROTOTYPES: {
+        String: true,
+        Array: false
       }
     },
 
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    contentSecurityPolicy: {
+      'default-src': "'none' blob:",
+      'script-src': "'self' 'unsafe-eval' https://*.mapbox.com",
+      'font-src': "'self'",
+      'connect-src': "'self' *",
+      'img-src': "'self' http://*.mapbox.com https://*.mapbox.com data: blob:",
+      'style-src': "'self' *",
+      'media-src': "'self'"
     }
   };
 
