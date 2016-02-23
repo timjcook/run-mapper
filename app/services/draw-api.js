@@ -1,3 +1,4 @@
+/* global mapboxgl */
 import Ember from 'ember';
 
 export default Ember.Service.extend({
@@ -10,7 +11,8 @@ export default Ember.Service.extend({
       styles: {
         'gl-draw-line': {
           'paint': {
-            'line-width': 4
+            'line-width': 4,
+            'line-color': "#FF71B2"
           }
         }
       }
@@ -25,7 +27,8 @@ export default Ember.Service.extend({
   },
 
   getCurrentDrawing(drawObj) {
-    return drawObj.getAll().features[0];
+    let lastFeature = drawObj.getAll().features.length - 1;
+    return drawObj.getAll().features[lastFeature];
   }
   
   

@@ -10,8 +10,8 @@ export default Ember.Service.extend({
     var map = new mapboxgl.Map({
       container: 'map', // container id
       style: 'mapbox://styles/mapbox/streets-v8', //stylesheet location
-      center: [-74.50, 40], // starting position
-      zoom: 9 // starting zoom
+      center: [144.9633200, -37.8140000], // starting position
+      zoom: 15 // starting zoom
     }); 
 
     return map;

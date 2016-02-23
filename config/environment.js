@@ -17,6 +17,11 @@ module.exports = function(environment) {
       }
     },
 
+    'ember-cli-mirage': {
+      enabled: false
+    },
+
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -32,6 +37,7 @@ module.exports = function(environment) {
       'media-src': "'self'"
     }
   };
+  
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;

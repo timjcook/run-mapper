@@ -1,3 +1,5 @@
+/* global FakeXMLHttpRequest */
+
 import Ember from 'ember';
 
 export default Ember.Component.extend({
@@ -15,6 +17,9 @@ export default Ember.Component.extend({
   /** Hooks **/
 
   didInsertElement() {
+    FakeXMLHttpRequest.prototype.withCredentials = false; //fix for corslite.js
+    FakeXMLHttpRequest.prototype.onload = function () {}; //fix for FakeXMLHttpRequest (pretender), 
+
     this.set("map",  this.get("mapBoxAPI").createMap());
 
     this.get("map").on("load", () => {
