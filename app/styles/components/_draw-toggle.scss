@@ -1,6 +1,28 @@
 #draw-toggle {
+  @include user-select(none);
   z-index: 1;
 
   position: absolute;
-  top: 50px
+  top: 50px;
+  width: 250px;
+
+  button {
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.20);
+
+    @include appearance(none);
+    background: white;
+    outline: none;
+    border: none;
+    padding: 5px;
+
+    &:hover {
+      background-color: lighten($pink, 10%);
+      color: white;
+    }
+    &:active, &.active {
+      background-color: $pink;
+      color: white;
+    }
+  }
 }

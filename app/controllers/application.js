@@ -16,9 +16,8 @@ export default Ember.Controller.extend({
     },
 
     createNewRun(feature) {
-      console.log(feature);
       let run = this.get("store").createRecord("run", {
-        name: "My run",
+        name: `My run #${this.get("runs.length") + 1}`,
         feature: feature,
         dateCreated: new Date()
       });

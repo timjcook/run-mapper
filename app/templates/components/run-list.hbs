@@ -1,14 +1,21 @@
 <div id="run-list">
-  <ul>
-    {{#each runs as |run|}}
-      <li>
-        <div class="name">
-          {{run.name}}
-        </div>
-        <div class="distance">
-          {{run.distance}}
-        </div>
-      </li>
-    {{/each}}
-  </ul>
+  <div class="heading">
+    Your recorded runs
+  </div>
+  {{#if runs.length}}
+    <ul>
+      {{#each runs as |run|}}
+        <li>
+          <div class="name">
+            {{run.name}}
+          </div>
+          <div class="distance">
+            {{run.distance}}
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>You have not ran anywhere in years.</p>
+  {{/if}}
 </div>

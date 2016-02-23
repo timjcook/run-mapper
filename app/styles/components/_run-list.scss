@@ -1,8 +1,34 @@
 #run-list {
+  @include user-select(none);
   z-index: 1;
 
   position: absolute;
   top: 100px;
 
   background-color: white;
+
+  width: 250px;
+
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.20);
+
+  .heading {
+    background-color: #555;
+    color: #EEE;
+    padding: 3px 0;
+    text-align: center;
+  }
+
+  ul {
+    @include scut-list-unstyled;
+    li {
+      padding: 2px 5px;
+      @include display(flex);
+      .name {
+        @include flex-basis(150px);
+      }
+      .distance {
+        @include flex-basis(100px);
+      }
+    }
+  }
 }

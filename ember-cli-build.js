@@ -3,6 +3,14 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+    sassOptions: {
+      includePaths: [
+        'bower_components/scut/dist',
+        'bower_components/bourbon/app/assets/stylesheets'
+      ]
+    },
+    
+    
     // Add options here
   });
 
