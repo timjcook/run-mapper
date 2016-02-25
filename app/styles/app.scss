@@ -1,9 +1,24 @@
 @import "bourbon";
 @import "scut";
 
+// map colour palette
+// Image_MonsterTeddy_StreetArt_Melbourne.jpg
+// $grey: #646167;
+// $black: #302f37;
+// $green: #62820c;
+// $red: #ee5220;
+// $lightGrey: #7f7872;
+
+// #DD3269
+
+// #575351,#152802,#97856a,#282326,#566633
+
+// #242124,#4c4b4f,#3a4d84,#1e2741,#71d0b6
+
 $pink: #FF71B2;
 // @import "core/typography";
 
 @import "components/draw-toggle";
+@import "components/track-toggle";
 @import "components/run-list";
 @import "components/map";

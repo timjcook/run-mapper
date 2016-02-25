@@ -11,7 +11,7 @@ export default Ember.Service.extend({
       styles: {
         'gl-draw-line': {
           'paint': {
-            'line-width': 4,
+            'line-width': 8,
             'line-color': "#FF71B2"
           }
         }
@@ -30,6 +30,6 @@ export default Ember.Service.extend({
     let lastFeature = drawObj.getAll().features.length - 1;
     return drawObj.getAll().features[lastFeature];
   }
-  
-  
+
+
 });
