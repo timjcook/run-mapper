@@ -17,7 +17,8 @@
     "Faker": "~3.0.0",
     "bourbon": "4.2.3",
     "font-awesome": "~4.4.0",
-    "moment": "~2.10.6"
+    "moment": "~2.10.6",
+    "Scut": "scut#^1.4.0"
   },
   "ignore": []
 }

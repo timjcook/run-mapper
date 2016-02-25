@@ -18,7 +18,7 @@ export default Ember.Component.extend({
 
   didInsertElement() {
     FakeXMLHttpRequest.prototype.withCredentials = false; //fix for corslite.js
-    FakeXMLHttpRequest.prototype.onload = function () {}; //fix for FakeXMLHttpRequest (pretender), 
+    FakeXMLHttpRequest.prototype.onload = function () {}; //fix for FakeXMLHttpRequest (pretender),
 
     this.set("map",  this.get("mapBoxAPI").createMap());
 
@@ -38,5 +38,13 @@ export default Ember.Component.extend({
       this.get("drawAPI").startDrawingLine(this.get("draw"));
     }
   }),
+
+  isToggledDidChange: Ember.observer("isToggled", function() {
+    if (this.get('isToggled')) {
+        this.get('mapBoxAPI').activateTracks(this.get('map'));
+    } else {
+      this.get('mapBoxAPI').deactivateTracks(this.get('map'));
+    }
+  })
 
 });

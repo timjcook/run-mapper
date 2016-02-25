@@ -9,8 +9,13 @@ export default Ember.Controller.extend({
   }),
 
   isDrawing: false,
+  isToggled: false,
 
   actions: {
+    toggleTrack(isToggled) {
+      this.set("isToggled", isToggled);
+    },
+
     toggleDrawing(isDrawing) {
       this.set("isDrawing", isDrawing);
     },
